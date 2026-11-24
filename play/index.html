@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#05060a" />
+    <meta
+      name="description"
+      content="voidrunnerz is a free courier shooter. Haul the contract, shoot pirates, and get paid in credits."
+    />
+    <meta property="og:title" content="voidrunnerz" />
+    <meta
+      property="og:description"
+      content="Haul cargo through hostile lanes. Get paid in credits. Enlist and play."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="voidrunnerz" />
+    <title>voidrunnerz</title>
+    <script type="module" crossorigin src="../assets/play-CtUKxcSZ.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/cast-BxB1Z5e2.js">
+    <link rel="stylesheet" crossorigin href="../assets/play-CIQTnOj0.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage">
+        <aside class="wing wing-left">
+          <section class="rail-card">
+            <p class="rail-kicker">Support the dev</p>
+            <p class="rail-copy">voidrunnerz is made by one developer. Tips will help fund new ships, bosses, contracts, and more</p>
+            <a class="fuel" id="fuel-link"><span>⚡ Fuel the next run</span><span class="fuel-sub">Donate</span></a>
+          </section>
+          <section class="rail-card">
+            <p class="rail-kicker">Get dispatches</p>
+            <p class="rail-copy">New bosses, ships, and builds. No spam.</p>
+            <form id="dispatch-form" class="dispatch-form">
+              <input id="dispatch-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" />
+              <button class="rail-button" id="dispatch-signup" type="submit">Sign me up</button>
+            </form>
+          </section>
+          <section class="rail-card">
+            <p class="rail-kicker">Follow the dev</p>
+            <a class="x-link" href="https://x.com/dharrisonshin">𝕏 @dharrisonshin</a>
+            <p class="rail-kicker" id="build-label">What's new</p>
+            <ul class="changelog" id="changelog"></ul>
+          </section>
+        </aside>
+        <div id="well">
+          <div id="fit">
+            <div id="audio-dock">
+              <button id="mute-toggle" type="button" aria-pressed="false">Sound</button>
+              <label class="vol-label">Vol
+                <input id="volume-slider" type="range" min="0" max="100" value="70" aria-label="Volume" />
+              </label>
+            </div>
+            <section id="screen-menu" aria-labelledby="logo"></section>
+            <section id="screen-shop" hidden></section>
+            <section id="screen-talk" hidden></section>
+            <section id="screen-play" hidden>
+              <canvas id="view" width="390" height="760" aria-hidden="true"></canvas>
+              <button id="pause-run" type="button" aria-pressed="false">Pause</button>
+              <p id="play-hint"></p>
+              <div id="consumables"></div>
+              <button id="fire" type="button">FIRE</button>
+            </section>
+            <section id="screen-result" hidden></section>
+            <p id="live" class="sr-only" aria-live="polite"></p>
+          </div>
+        </div>
+        <aside class="wing wing-right">
+          <section class="rail-card">
+            <p class="rail-kicker">How to play</p>
+            <p class="rail-copy"><strong>Goal:</strong> Haul cargo across the lane and get paid.</p>
+            <p class="rail-label">Controls</p>
+            <ul class="control-list">
+              <li><span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span> move</li>
+              <li><span class="keycap">Space</span> fire</li>
+              <li><span class="keycap">↑</span> bomb, if you are carrying one</li>
+              <li><span class="keycap">↓</span> cone beam, if you own it</li>
+              <li><span class="keycap">P</span> / <span class="keycap">Esc</span> pause</li>
+              <li><span class="keycap">M</span> mute</li>
+            </ul>
+            <p class="rail-copy">Mobile: drag to fly. Hold FIRE to shoot. Tap BEAM for the cone beam if you own it. A bomb you carry sits above FIRE.</p>
+            <p class="rail-label">The rules</p>
+            <ul class="rule-list">
+              <li>On a fragile contract, each hull hit cuts that contract's pay. A shield hit does not.</li>
+              <li>If the hull is destroyed, that crate pays nothing. Credits already in the bank stay.</li>
+              <li>Spend credits in the Yard shop.</li>
+              <li>The Threat Log fills in the first time you meet an enemy.</li>
+              <li>Black Contracts pay 1,600. A patrol tag is an arrest and a 400 credit fine.</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+    <noscript>voidrunnerz needs JavaScript to fly.</noscript>
+  </body>
+</html>
